@@ -1,0 +1,23 @@
+.Altitude.stable::after,
+.Altitude.up::after,
+.Altitude.down::after {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: "\003D";
+  text-align: center;
+}
+.Altitude.up::after {
+  content: "\25B2";
+  color: green;
+}
+.Altitude.down::after {
+  content: "\25BC";
+  color: red;
+}
+
+.Altitude .altitude-value-box {
+  min-width: 60px;
+  display: inline-block;
+  text-align: right;
+}

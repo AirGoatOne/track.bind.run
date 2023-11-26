@@ -1,0 +1,36 @@
+.Elevation {
+  display: flex;
+}
+.Elevation .up,
+.Elevation .down {
+  width: 100px;
+}
+.Elevation.down .up,
+.Elevation.up .down {
+  opacity: 0.6;
+}
+
+.Elevation .up {
+  text-align: right;
+  /* border-right: 1px solid var(--fbc-secondary-text); */
+  padding-right: 10px;
+}
+.Elevation .down {
+  padding-left: 10px;
+}
+.Elevation .up::before,
+.Elevation .down::after {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: "\003D";
+  text-align: center;
+}
+.Elevation .up::before {
+  content: "\25B2";
+  color: green;
+}
+.Elevation .down::after {
+  content: "\25BC";
+  color: red;
+}

@@ -1,0 +1,45 @@
+.Cockpit {
+  /* width: 80%;
+    max-width: 960px;
+    margin: 0 auto; */
+  /* background: #fff;
+    color: #000; */
+  /* z-index: 499;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    position: absolute;
+    bottom: 30px; */
+}
+
+.Cockpit h3 {
+  margin: 0;
+}
+
+.Cockpit [role="row"] {
+  border-bottom: 1px solid var(--fbc-secondary-text);
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.Cockpit [role="cell"] {
+  padding: 16px;
+  border-right: 1px solid var(--fbc-secondary-text);
+}
+.Cockpit [role="cell"] pre {
+  margin: 0;
+}
+.Cockpit [role="row"]:last-child,
+.Cockpit [role="cell"]:last-child {
+  border: none;
+}
+
+.Cockpit .track-name {
+  flex-grow: 2;
+}
+
+.Cockpit .track-name h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
