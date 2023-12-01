@@ -1,30 +1,44 @@
-.Cockpit {
-  /* width: 80%;
-    max-width: 960px;
-    margin: 0 auto; */
-  /* background: #fff;
-    color: #000; */
-  /* z-index: 499;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
-    position: absolute;
-    bottom: 30px; */
-}
-
 .Cockpit h3 {
   margin: 0;
+  font-size: 16px;
 }
 
 .Cockpit [role="row"] {
   border-bottom: 1px solid var(--fbc-secondary-text);
   display: flex;
+  flex-direction: column;
   width: 100%;
   align-items: center;
 }
 
+.Cockpit .Cockpit-controls > div {
+  display: none;
+}
+.Cockpit .Cockpit-controls.open > div {
+  display: block;
+}
+
+.Cockpit .Cockpit-controls > div.track-name {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-grow: 2;
+  overflow: hidden;
+}
+
+.Cockpit .Cockpit-controls > div.track-name h3 {
+  flex-grow: 2;
+  padding: 8px;
+}
+
+.Cockpit .Cockpit-controls .open-close {
+  display: inline-block;
+  padding: 8px;
+  cursor: pointer;
+}
+
 .Cockpit [role="cell"] {
-  padding: 16px;
-  border-right: 1px solid var(--fbc-secondary-text);
+  padding: 8px;
 }
 .Cockpit [role="cell"] pre {
   margin: 0;
@@ -34,12 +48,41 @@
   border: none;
 }
 
-.Cockpit .track-name {
-  flex-grow: 2;
-}
-
 .Cockpit .track-name h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+
+@media screen and (min-width: 810px) {
+  .Cockpit .Cockpit-controls > div.track-name {
+    width: auto;
+    max-width: 200px;
+    overflow: hidden;
+  }
+
+  .Cockpit .Cockpit-controls > div {
+    display: block;
+  }
+  .Cockpit .Cockpit-controls .open-close {
+    display: none;
+  }
+  .Cockpit [role="row"] {
+    flex-direction: row;
+  }
+  .Cockpit [role="cell"] {
+    padding: 8px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .Cockpit .Cockpit-controls > div.track-name {
+    width: auto;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .Cockpit [role="cell"] {
+    padding: 16px;
+    border-right: 1px solid var(--fbc-secondary-text);
+  }
 }
